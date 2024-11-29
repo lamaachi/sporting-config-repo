@@ -7,7 +7,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: create # You can use 'validate', 'update', 'create', or 'create-drop'
+      ddl-auto: update # You can use 'validate', 'update', 'create', or 'create-drop'
     show-sql: true
 server:
   port: 8085
