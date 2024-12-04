@@ -7,7 +7,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:create} # You can use 'validate', 'update', 'create', or 'create-drop'
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update} # You can use 'validate', 'update', 'create', or 'create-drop'
     show-sql: true
   boot:
     admin:
