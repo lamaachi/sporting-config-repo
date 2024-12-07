@@ -8,9 +8,22 @@ spring:
     admin:
       client:
         url: http://localhost:8080/applications
-  kafka:
-    bootstrap-servers: localhost:9092
-
+#  kafka:
+#    bootstrap-servers: localhost:9092
+  rabbitmq:
+    host: localhost      # RabbitMQ host
+    port: 5672           # RabbitMQ port
+    username: guest      # RabbitMQ default username
+    password: guest      # RabbitMQ default password
+    virtual-host: /      # RabbitMQ virtual host (default is '/')
+    listener:
+      simple:
+        retry:
+          enabled: true  # Enable retry mechanism for message consumption
+          initial-interval: 1000
+          max-attempts: 3
+          multiplier: 2.0
+      acknowledge-mode: auto  # Acknowledge messages automatically
   eureka:
     client:
       service-url:
